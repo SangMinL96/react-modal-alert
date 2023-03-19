@@ -33,10 +33,10 @@ Using react modal alert hook!!
 
 ```jsx static
 import React, { useState } from 'react';
-import  useButtonAlert  from 'hooks/useButtonAlert';
+import  {useModalAlert}  from 'hooks/useModalAlert';
 
 function Page() {
-    const { AlertContainer, modalAlert, setIsStart } = useButtonAlert();
+    const { AlertContainer, modalAlert, setIsStart } = useModalAlert();
     const onClick = async () => {
         modalAlert({
           start: true,

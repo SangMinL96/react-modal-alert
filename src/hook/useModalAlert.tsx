@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import AlertContainer from '../AlertContainer';
+import AlertContainer from '../components/AlertContainer';
 type AlertContainerType = {
-  body: React.ReactElement;
+  body: any;
   isFirstRender?: boolean;
   button?: React.ReactElement;
   alertStyle?: React.CSSProperties;
@@ -15,7 +15,7 @@ type AlertType = {
   button?: React.ReactElement;
   autoClose?: number;
 };
-function useButtonAlert(): {
+function useModalAlert(): {
   AlertContainer: (value: AlertContainerType) => React.ReactElement;
   modalAlert: (params: AlertType) => any;
   setIsStart: React.Dispatch<React.SetStateAction<boolean>>;
@@ -75,4 +75,4 @@ function useButtonAlert(): {
   };
 }
 
-export { useButtonAlert };
+export { useModalAlert };

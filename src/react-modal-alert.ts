@@ -1,1 +1,1 @@
-export { useButtonAlert } from './components/alert/useButtonAlert';
+export { useModalAlert } from './hook/useModalAlert';
