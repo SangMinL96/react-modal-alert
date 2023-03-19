@@ -11,7 +11,7 @@ react-modal-alert library.
 
 ## Demo
 
-<!-- [![Edit react-modal-alert](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-modal-alert-m5lye2?file=/src/App.js) -->
+[![Edit react-modal-alert](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/react-modal-alert-qjj6cs?file=%2Fsrc%2FApp.js)
 
 ## Installation
 

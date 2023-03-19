@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Alert from './alert/Alert';
 
@@ -33,11 +33,20 @@ function AlertContainer({
   autoClose,
   backGroundColor,
 }: PropsContainerType) {
+  const containerAutoCloseRef = useRef(null);
+  useEffect(() => {
+    if (!isStart) {
+      clearTimeout(containerAutoCloseRef.current);
+    }
+  }, [isStart]);
   useEffect(() => {
     if (isFirstRender) {
       setIsStart(true);
       bodyRef.current = body;
       buttonRef.current = button;
+    }
+    if (autoClose) {
+      containerAutoCloseRef.current = setTimeout(() => setIsStart(false), autoClose);
     }
     return () => {
       setIsStart(false);
@@ -45,11 +54,6 @@ function AlertContainer({
       buttonRef.current = null;
     };
   }, []);
-
-  if (autoClose) {
-    clearTimeout(autoCloseRef.current);
-    autoCloseRef.current = setTimeout(() => setIsStart(false), autoClose);
-  }
   if (!bodyRef.current) {
     bodyRef.current = body;
   }

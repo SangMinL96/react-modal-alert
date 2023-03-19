@@ -10,8 +10,7 @@ type AlertContainerType = {
   backGroundColor?: string;
 };
 type AlertType = {
-  start: boolean;
-  body?: React.ReactElement;
+  body: React.ReactElement;
   button?: React.ReactElement;
   autoClose?: number;
 };
@@ -35,6 +34,9 @@ function useModalAlert(): {
     }
     if (autoClose) {
       autoCloseRef.current = setTimeout(() => setIsStart(false), autoClose);
+    } else {
+      clearTimeout(autoCloseRef.current);
+      autoCloseRef.current = '!autoClose';
     }
     return setIsStart(true);
   };
@@ -65,7 +67,7 @@ function useModalAlert(): {
         button={button}
         alertStyle={alertStyle}
         zIndex={zIndex}
-        autoClose={autoClose}
+        autoClose={autoCloseRef.current === '!autoClose' ? null : autoClose}
         backGroundColor={backGroundColor}
       />
     ),
