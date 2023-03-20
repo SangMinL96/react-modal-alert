@@ -1,4 +1,4 @@
-# React Drag and Drop Images
+# React-Modal-Alert
 
 [![Version](http://img.shields.io/npm/v/react-modal-alert.svg)](https://www.npmjs.org/package/react-modal-alert)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
