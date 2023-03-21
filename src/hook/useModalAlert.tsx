@@ -10,7 +10,7 @@ type AlertContainerType = {
   backGroundColor?: string;
 };
 type AlertType = {
-  body: React.ReactElement;
+  body?: React.ReactElement;
   button?: React.ReactElement;
   autoClose?: number;
 };
