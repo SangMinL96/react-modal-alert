@@ -39,7 +39,6 @@ function Page() {
     const { AlertContainer, modalAlert, setIsStart } = useModalAlert();
     const onClick = async () => {
         modalAlert({
-          start: true,
           body: <div>custom body</div>,
           button: <div onClick={()=>setIsStart(false)}>custom button</div>
         });
@@ -79,7 +78,6 @@ function Page() {
 
 ```jsx static
     modalAlert({
-      start: true, //only true
       body?:  null || <div></div> || <BodyComponent />, //default: parent (AlertContainer({body}))
       button?: null || <div></div> || <ButtonComponent />,  //default: parent (AlertContainer({button}))
       autoClose?: null,  //default: parent (AlertContainer({autoClose}))

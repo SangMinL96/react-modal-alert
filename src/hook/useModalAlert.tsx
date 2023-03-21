@@ -16,7 +16,7 @@ type AlertType = {
 };
 function useModalAlert(): {
   AlertContainer: (value: AlertContainerType) => React.ReactElement;
-  modalAlert: (params: AlertType) => any;
+  modalAlert: (params?: AlertType) => any;
   setIsStart: React.Dispatch<React.SetStateAction<boolean>>;
   isStart: boolean;
 } {
